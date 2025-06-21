@@ -162,4 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Software Search
+  const softwareSearchInput = document.querySelector('#software-search');
+  const softwareList = document.querySelector('#software-list');
+  const softwareNoResults = document.querySelector('#no-results');
+
+  if (softwareSearchInput && softwareList && softwareNoResults) {
+    softwareSearchInput.addEventListener('input', () => {
+      const query = softwareSearchInput.value.toLowerCase().trim();
+      const softwareCards = softwareList.querySelectorAll('.software-card');
+      let hasResults = false;
+
+      softwareCards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+        if (name.includes(query)) hasResults = true;
+      });
+
+      softwareNoResults.style.display = hasResults ? 'none' : 'block';
+    });
+  }
 });
