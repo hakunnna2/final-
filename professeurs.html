@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professeurs | Génie Énergétique et Énergies Renouvelables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-white font-poppins">
+  <!-- Email Validation Modal -->
+  <div id="email-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Vérification de l'Email Académique</h2>
+      <p class="text-gray-600 text-sm mb-4">Veuillez entrer votre email académique (@etu.uae.ac.ma) pour accéder aux contacts des professeurs.</p>
+      <div class="relative">
+        <input
+          id="email-input"
+          type="email"
+          placeholder="votre.email@etu.uae.ac.ma"
+          aria-label="Entrer votre email académique"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+          required
+        >
+        <i class="fas fa-envelope absolute right-3 top-3 text-gray-600"></i>
+      </div>
+      <p id="email-error" class="text-red-500 text-sm mt-2 hidden">Veuillez entrer un email valide.</p>
+      <button
+        id="email-submit"
+        class="mt-4 w-full bg-teal-500 text-white py-2 rounded-md hover:bg-teal-600 transition-all focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+        aria-label="Soumettre l'email"
+      >
+        Soumettre
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Close menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-teal-500">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-teal-500">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-teal-500 font-semibold active">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-teal-500">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Professors Directory -->
+  <main class="container mx-auto px-4 py-12 pt-24">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Répertoire des Professeurs</h2>
+    <!-- Search Bar -->
+    <div class="sticky top-16 bg-white py-4 z-10 mb-8">
+      <div class="relative max-w-md mx-auto">
+        <input
+          id="professor-search"
+          type="text"
+          placeholder="Rechercher un professeur..."
+          aria-label="Rechercher un professeur par nom"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+        >
+        <i class="fas fa-search absolute right-3 top-3 text-gray-600"></i>
+      </div>
+    </div>
+    <!-- Professor List -->
+    <section id="professor-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 0;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Younes Abou El Hanoune</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:yabouelhanoune@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>yabouelhanoune@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 1;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Miloud Aboud</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.aboud@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.aboud@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 2;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed Addam</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.addam@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.addam@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 3;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed Akouh</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.akouh@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.akouh@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 4;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Kamal Amghar</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:k.amghar@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>k.amghar@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 5;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. M'hamed Aznag</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.aznag@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.aznag@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 6;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Imad Badi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:ibadi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>ibadi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 7;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdelkhalak Bahri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:abahri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>abahri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 8;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Malika Balguartit</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.balguartit@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.balguartit@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 9;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Lahcen Balli</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:lballi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>lballi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 10;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. El Hassan Beghdadi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:ebarhdadi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>ebarhdadi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 11;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Omar Benamari</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:o.benamari@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>o.benamari@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 12;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Bilal Bouaiss</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:b.bouaiss@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>b.bouaiss@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 13;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ahmed Bouajaj</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:ahbouajaj@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>ahbouajaj@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 14;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. El Haj Bouazza</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:ebouazza@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>ebouazza@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 15;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Tarik Boudaa</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:t.boudaa@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>t.boudaa@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 16;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ahmed Boujraf</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.boujraf@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.boujraf@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 17;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abderrahim Boulanouar</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:aboulanouar@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>aboulanouar@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 18;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed Cherradi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.cherradi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.cherradi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 19;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Taoufik Choukri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:t.choukri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>t.choukri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 20;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. El Wardani Dadi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:w.dadi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>w.dadi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 21;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Fouad Dimane</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:f.dimane@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>f.dimane@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 22;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ismael Driouch</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:i.driouch@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>i.driouch@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 23;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdelouafi El Ghoulbzouri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.elghoulbzouri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.elghoulbzouri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 24;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed El Haim</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:melhaim@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>melhaim@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 25;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Samia El Jinani</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:s.eljinani@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>s.eljinani@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 26;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Achraf El Kasmi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.elkasmi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.elkasmi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 27;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdelmoughit El Mansouri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.elmansouri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.elmansouri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 28;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed El Mathari</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.elmathari@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.elmathari@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 29;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Hossain El Ouarghi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:helouarghi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>helouarghi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 30;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mustapha El Yousfi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.elyousfi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.elyousfi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 32;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Said Elkhaldi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:s.elkhaldi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>s.elkhaldi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 33;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Fatima Amallah</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:f.amallah@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>f.amallah@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 35;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Issam Hanafi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:hanafi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>hanafi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 36;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed Hlimi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:mhlimi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>mhlimi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 37;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Hajar Idder</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:h.idder@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>h.idder@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 38;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ridouan Inahnah</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:r.inahnah@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>r.inahnah@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 39;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Taoufiq Kadri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:t.kadri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>t.kadri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 40;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Nabil Kannouf</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:n.kannouf@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>n.kannouf@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 41;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Aissam Khaled</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.khaled@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.khaled@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 42;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Aziz Khamjane</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:akhamjane@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>akhamjane@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 43;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ahmed Lahjouji El Idrissi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.lahjoujielidrissi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.lahjoujielidrissi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 44;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdellatif Lamhamdi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.lamhamdi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.lamhamdi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 45;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Lakhdar Maazouzi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:l.maazouzi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>l.maazouzi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 46;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdelhadi Makan</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.makan@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.makan@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 47;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Fouzia Moradi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:f.moradi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>f.moradi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 48;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ahmed Moussaid</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:ahmoussaid@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>ahmoussaid@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 49;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Sara Naamane</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:s.naamane@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>s.naamane@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 50;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Nordine Nouayti</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:nnouayti@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>nnouayti@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 51;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Hayat Routaib</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:hroutaib@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>hroutaib@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 52;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohamed Saidi Hassani Alaoui</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.saidihssanialaoui@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.saidihssanialaoui@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 53;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Abdelhafid Salmani</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:asalmani@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>asalmani@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 54;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Zakaria Tahri</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:z.tahri@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>z.tahri@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 55;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Rachid Tiskatine</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:r.tiskatine@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>r.tiskatine@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 56;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Mohammed Zaryouhi</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:m.zaryouhi@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>m.zaryouhi@uae.ac.ma</a></p>
+      </div>
+      <div class="professor-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 57;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3 hidden-content hidden">Pr. Ahmed Zian</h3>
+        <p class="text-gray-500 text-sm mb-1 hidden-content hidden"><a href="mailto:a.zian@uae.ac.ma" class="text-teal-500 hover:underline"><i class="fas fa-envelope mr-1"></i>a.zian@uae.ac.ma</a></p>
+      </div>
+    </section>
+    <div id="no-results" class="hidden text-center text-gray-600 mt-8">Aucun professeur trouvé.</div>
+  </main>
+
+  <!-- Footer -->
+   <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEER 3 | Génie Énergétique et Énergies Renouvelables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-white font-poppins">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Close menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- GEER 3 Content -->
+  <main class="container mx-auto px-4 py-12 pt-24">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">GEER 3 - Troisième Année</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">La troisième année se concentre sur l’application pratique et les projets de fin d’études, préparant les étudiants à leur carrière professionnelle.</p>
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Modules du Semestre 5</h3>
+      <table class="module-table w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-green-600 text-white">
+            <th class="p-3">Code</th>
+            <th class="p-3">Module</th>
+            <th class="p-3">Contenu</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M351</td>
+            <td class="p-3">Conception et dimensionnement des systèmes énergétiques</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M351" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M352</td>
+            <td class="p-3">Gestion des projets énergétiques</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M352" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M353</td>
+            <td class="p-3">Technologies avancées en énergies renouvelables</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M353" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M354</td>
+            <td class="p-3">Audit énergétique</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M354" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M355</td>
+            <td class="p-3">Simulation et optimisation énergétique</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M355" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M356</td>
+            <td class="p-3">Langues Étrangères (Anglais / Français)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M356" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M357</td>
+            <td class="p-3">Droit et législation de l’énergie</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M357" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+        </tbody>
+      </table>
+      
+    </section>
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Modules du Semestre 6</h3>
+      <table class="module-table w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-green-600 text-white">
+            <th class="p-3">Code</th>
+            <th class="p-3">Module</th>
+            <th class="p-3">Contenu</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M361</td>
+            <td class="p-3">Projet de Fin d’Études (PFE)</td>
+            <td class="p-3"><a href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+        
+        </tbody>
+      </table>
+       
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil | Génie Énergétique et Énergies Renouvelables</title>
+  <meta name="description" content="Programme GEER à l’ENSA Al Hoceima - Formation en Génie Énergétique et Énergies Renouvelables pour des solutions durables.">
+  <meta name="keywords" content="GEER, ENSA Al Hoceima, génie énergétique, énergies renouvelables, ingénieur">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+
+</head>
+<body class="bg-white font-poppins">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Fermer le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-600 to-blue-800 text-white py-20 pt-24">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Bienvenue au Programme GEER</h1>
+      <p class="text-lg md:text-xl mb-6 hero-text">Formez-vous en Génie Énergétique et Énergies Renouvelables à l’ENSA Al Hoceima pour un avenir durable.</p>
+      <a href="#program-overview" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-green-600 hover:text-white transition">Découvrez le programme</a>
+    </div>
+  </section>
+
+  <!-- Program Overview -->
+  <main class="container mx-auto px-4 py-12">
+    <section id="program-overview" class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">À Propos du Programme GEER</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">Le programme Génie Énergétique et Énergies Renouvelables (GEER) forme des ingénieurs capables de concevoir, gérer et optimiser des solutions énergétiques durables. À travers un cursus de trois ans, les étudiants acquièrent des compétences en énergie renouvelable, efficacité énergétique et gestion de projets.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
+          <i class="fas fa-solar-panel text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Énergies Renouvelables</h3>
+          <p class="text-gray-600">Maîtrisez les technologies solaires, éoliennes et hydrauliques pour un avenir vert.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
+          <i class="fas fa-bolt text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Efficacité Énergétique</h3>
+          <p class="text-gray-600">Apprenez à optimiser la consommation énergétique dans les bâtiments et industries.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
+          <i class="fas fa-project-diagram text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Gestion de Projets</h3>
+          <p class="text-gray-600">Développez des compétences pour piloter des projets énergétiques complexes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Years -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Explorez les Années de GEER</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="geer1.html" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
+          <i class="fas fa-book-open text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800">GEER 1</h3>
+          <p class="text-gray-600 text-sm mt-2">Fondations en sciences et techniques pour le génie énergétique.</p>
+        </a>
+        <a href="geer2.html" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
+          <i class="fas fa-tools text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800">GEER 2</h3>
+          <p class="text-gray-600 text-sm mt-2">Approfondissement des technologies énergétiques et projets pratiques.</p>
+        </a>
+        <a href="geer3.html" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
+          <i class="fas fa-graduation-cap text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800">GEER 3</h3>
+          <p class="text-gray-600 text-sm mt-2">Spécialisation et préparation au projet de fin d’études.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-12 bg-green-600 text-white p-8 rounded-lg text-center">
+      <h2 class="text-2xl font-bold mb-4">Prêt à rejoindre Club G2ER ?</h2>
+      <p class="text-lg mb-6 max-w-2xl mx-auto">Contactez-nous pour plus d’informations sur notre Club.</p>
+      <a href="https://wa.me/212640209741" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">Nous contacter</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

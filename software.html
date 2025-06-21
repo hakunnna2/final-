@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logiciels | Génie Énergétique et Énergies Renouvelables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-white font-poppins">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600 ">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Logiciels</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Close menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-teal-500">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-teal-500">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-teal-500">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-teal-500">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-teal-500">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Chatbot Floating Button -->
+  <button
+    id="chatbot-toggle"
+    aria-label="Ouvrir le chatbot GEER"
+    class="fixed bottom-6 right-6 bg-teal-500 text-white p-4 rounded-full shadow-lg hover:bg-teal-600 focus:ring-2 focus:ring-teal-500 z-50"
+  >
+    <i class="fas fa-comment-alt text-xl"></i>
+  </button>
+
+  <!-- Chatbot Modal -->
+  <div id="chatbot-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="chat-container bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-semibold text-gray-800">Chatbot GEER</h3>
+        <button id="chatbot-close" aria-label="Fermer le chatbot" class="text-gray-600 hover:text-gray-800">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div id="chatbot-messages" class="h-64 overflow-y-auto mb-4 p-4 bg-gray-100 rounded-md" aria-live="polite"></div>
+      <div class="flex">
+        <input
+          id="chatbot-input"
+          type="text"
+          placeholder="Tapez votre question..."
+          aria-label="Poser une question au chatbot GEER"
+          class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+        >
+        <button
+          id="chatbot-send"
+          aria-label="Envoyer la question"
+          class="px-4 py-2 bg-teal-500 text-white rounded-r-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-500"
+        >
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Software Directory -->
+  <main class="container mx-auto px-4 py-12 pt-24">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Logiciels pour GEER</h2>
+    
+    <!-- Search Bar -->
+    <div class="sticky top-16 bg-white py-4 z-10 mb-8">
+      <div class="relative max-w-md mx-auto">
+        <input
+          id="software-search"
+          type="text"
+          placeholder="Rechercher un logiciel..."
+          aria-label="Rechercher un logiciel par nom"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+        >
+        <i class="fas fa-search absolute right-3 top-3 text-gray-600"></i>
+      </div>
+    </div>
+    <!-- Software List -->
+    <section id="software-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 0;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">HAP (Hourly Analysis Program)</h3>
+        <p class="text-gray-500 text-sm mb-1">Utilisé pour le calcul des charges de chauffage, ventilation et climatisation (CVC). Idéal pour dimensionner les systèmes CVC dans les bâtiments.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://www.mediafire.com/file/0l94tg59z0xbkm6/Carrier.HAP.v6.zip/file" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger HAP"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 1;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">Binayat</h3>
+        <p class="text-gray-500 text-sm mb-1">Outil pour l’analyse de l’efficacité énergétique des bâtiments. Permet d’optimiser la conception pour réduire la consommation énergétique.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://www.amee.ma/sites/default/files/publications/BINAYATE_By_AMEE.zip" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger Binayat "><i class="fas fa-download mr-1"></i>Télécharger </a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 2;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">SketchUp</h3>
+        <p class="text-gray-500 text-sm mb-1">Logiciel de modélisation 3D pour créer des plans de maisons, panneaux solaires ou autres structures. Très utile pour l’efficacité énergétique et le solaire.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://www.mediafire.com/file/q85fcxrs7v5an38/SketchUp_Pro_2023_x64.zip/file" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger SketchUp"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 3;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">Dialux</h3>
+        <p class="text-gray-500 text-sm mb-1">Outil pour simuler et calculer l’éclairage des bâtiments. Essentiel pour optimiser l’efficacité énergétique dans les systèmes d’éclairage.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://www.dialux.com/fr-FR/telechargement" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger Dialux"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 4;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">PVsyst</h3>
+        <p class="text-gray-500 text-sm mb-1">Logiciel de simulation des systèmes photovoltaïques (PV). Indispensable pour concevoir et analyser les installations solaires.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://www.mediafire.com/file/6lzhaadfj91ijwd/PVsyst_Professional_7.zip/file" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger PVsyst"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 5;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">Aspen</h3>
+        <p class="text-gray-500 text-sm mb-1">Utilisé dans la recherche pour optimiser les centrales (ex. cogénération) ou simuler des réacteurs. Complexe à installer, recommandé pour les utilisateurs avancés.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://esupport.aspentech.com/S_Login?startURL=%2FS_MediaUpgrade" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger Aspen"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 6;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">RETScreen</h3>
+        <p class="text-gray-500 text-sm mb-1">Outil d’analyse pour les projets d’énergie renouvelable et d’efficacité énergétique. Permet d’évaluer la faisabilité et les performances.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://natural-resources.canada.ca/maps-tools-publications/tools-applications/retscreen" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger RETScreen"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+      <div class="software-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition animate-stagger" style="--order: 7;">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2 border-l-4 border-teal-500 pl-3">MATLAB</h3>
+        <p class="text-gray-500 text-sm mb-1">Plateforme pour le calcul numérique et la simulation. Utilisé pour modéliser des systèmes énergétiques et analyser des données.</p>
+        <p class="text-gray-500 text-sm mb-1"><a href="#" data-url="https://mega.nz/file/MFJQ3ZwQ#U6OevDrhsTGBn-9oQfr46poeF2rPkiYyQDtOYawBx9c" class="download-link text-teal-500 hover:underline" rel="noopener" aria-label="Télécharger MATLAB"><i class="fas fa-download mr-1"></i>Télécharger</a></p>
+      </div>
+    </section>
+    <div id="no-results" class="hidden text-center text-gray-600 mt-8">Aucun logiciel trouvé.</div>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

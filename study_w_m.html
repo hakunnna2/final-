@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study With Me | Génie Énergétique et Énergies Renouvelables</title>
+  <meta name="description" content="Améliorez vos études avec une playlist Spotify et des ressources GEER pour les étudiants d'ENSA Al Hoceima.">
+  <meta name="keywords" content="GEER, ENSA Al Hoceima, study with me, Spotify, ressources, étudiants, étude">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-white font-poppins">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Fermer le menu de navigation" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study-with-me.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-600 to-blue-800 text-white py-20 pt-24">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Study With Me</h1>
+      <p class="text-lg md:text-xl mb-6 hero-text">Améliorez vos sessions d'étude avec une playlist Spotify et des ressources de GEER pour exceller à l'ENSA Al Hoceima.</p>
+      <a href="#spotify-section" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-green-600 hover:text-white transition">Commencer à Étudier</a>
+    </div>
+  </section>
+
+  <!-- Study With Me Content -->
+  <main class="container mx-auto px-4 py-12">
+   
+
+    <!-- Spotify Playlist -->
+    <section id="spotify-section" class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Musique pour Étudier</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto mb-4 text-center">Profitez de notre playlist Spotify pour une ambiance d'étude optimale.</p>
+      <div class="text-center mb-4">
+        <button id="toggle-spotify" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition" aria-label="Afficher ou masquer la playlist Spotify" title="Masquer Spotify">Masquer Spotify</button>
+      </div>
+      <div id="spotify-container" class="max-w-xl mx-auto">
+        <div id="spotify-placeholder" class="bg-gray-200 h-96 rounded-md"></div>
+      </div>
+    </section>
+
+    <!-- Study Resources -->
+    <section id="resources-section" class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Ressources d'Étude</h2>
+      <p class="text-gray-600 max-w-xl mx-auto mb-8 text-center">Accédez à des ressources de GEER .</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger" style="--index: 1;">
+          <i class="fas fa-folder-open text-green-600 text-4xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">GEER 1</h3>
+          <p class="text-gray-600 mb-3">Cours et TD pour GEER 1.</p>
+          <a href="geer1.html" target="_blank" rel="noopener" class="text-green-600 hover:underline" aria-label="Accéder aux ressources GEER 1">Accéder</a>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger" style="--index: 2;">
+          <i class="fas fa-folder-open text-green-600 text-4xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">GEER 2</h3>
+          <p class="text-gray-600 mb-3">Cours et TD pour GEER 2.</p>
+          <a href="geer2.html" target="_blank" rel="noopener" class="text-green-600 hover:underline" aria-label="Accéder aux ressources GEER 2">Accéder</a>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger" style="--index: 3;">
+          <i class="fas fa-folder-open text-green-600 text-4xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">GEER 3</h3>
+          <p class="text-gray-600 mb-3">Cours et TD pour GEER 3.</p>
+          <a href="geer3.html" target="_blank" rel="noopener" class="text-green-600 hover:underline" aria-label="Accéder aux ressources GEER 3">Accéder</a>
+        </div>
+       
+       
+      </div>
+    </section>
+
+    <!-- Study Tips -->
+    <section id="tips-section" class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Conseils pour Étudier</h2>
+      <p class="text-gray-600 max-w-xl mx-auto mb-8 text-center">Adoptez ces stratégies pour maximiser votre apprentissage.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Planifiez vos sessions</h3>
+          <p class="text-gray-600">Divisez votre travail en blocs gérables avec des pauses régulières.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Évitez les distractions</h3>
+          <p class="text-gray-600">Elimine les interruptions externes en silenceant ton téléphone et tes notifications.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Prenez des notes actives</h3>
+          <p class="text-gray-600">Résumez les concepts dans vos propres mots.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Utilisez des ressources</h3>
+          <p class="text-gray-600">Consultez les cours GEER et outils externes.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

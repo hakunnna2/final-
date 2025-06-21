@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEER 2 | Génie Énergétique et Énergies Renouvelables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-white font-poppins">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
+        </a>
+        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
+      <div class="flex justify-end p-4">
+        <button id="menu-close" aria-label="Close menu" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600">Accueil</a></li>
+        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
+        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">GEER 2</a></li>
+        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
+        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600">Stages</a></li>
+        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
+        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
+        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- GEER 2 Content -->
+  <main class="container mx-auto px-4 py-12 pt-24">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">GEER 2 - Deuxième Année</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">La deuxième année approfondit les connaissances en systèmes énergétiques et introduit des concepts avancés en gestion de l’énergie.</p>
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Modules du Semestre 3</h3>
+      <table class="module-table w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-green-600 text-white">
+            <th class="p-3">Code</th>
+            <th class="p-3">Module</th>
+            <th class="p-3">Contenu</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M231</td>
+            <td class="p-3">Vibrations mécaniques et acoustiques</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M231" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M237</td>
+            <td class="p-3">Transferts de chaleur par convection</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M237" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M233</td>
+            <td class="p-3">Écoulement et transferts en changement de phase</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M233" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M234</td>
+            <td class="p-3">Management de l'énergie</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M234" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M232</td>
+            <td class="p-3">Échangeurs et machines thermiques / Énergie hydroélectrique</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M232" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M236</td>
+            <td class="p-3">Langues Étrangères (Français / Anglais)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M236" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M235</td>
+            <td class="p-3">Compétences culturelles et artistiques</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M235" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+        </tbody>
+      </table>
+       
+    </section>
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Modules du Semestre 4</h3>
+      <table class="module-table w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-green-600 text-white">
+            <th class="p-3">Code</th>
+            <th class="p-3">Module</th>
+            <th class="p-3">Contenu</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M241</td>
+            <td class="p-3">Energies renouvelables 1 (Energie solaire thermique et photovoltaïque)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M241" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M242</td>
+            <td class="p-3">Energies renouvelables 2 (Energie éolienne, biomasse)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M242" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M243</td>
+            <td class="p-3">Efficacité énergétique dans le bâtiment</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M243" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M244</td>
+            <td class="p-3">Systèmes de stockage d’énergie</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M244" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+          
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M245</td>
+            <td class="p-3">Réseaux intelligents (Smart Grids)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M245" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+           
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M246</td>
+            <td class="p-3">Langues Étrangères (Français / Anglais)</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M246" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="p-3">M247</td>
+            <td class="p-3">Entrepreneuriat et gestion de projets</td>
+            <td class="p-3"><a href="https://drive.google.com/cours/M247" target="_blank" class="text-green-600 hover:underline">Lien</a></td>
+            
+          </tr>
+        </tbody>
+      </table>
+       
+    </section>
+  </main>
+
+  <!-- Footer -->
+ <footer >
+    <p class="text-center mt-4 text-white">© Club G2ER</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
