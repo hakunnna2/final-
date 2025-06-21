@@ -1,220 +1,501 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stages | Génie Énergétique et Énergies Renouvelables</title>
-  <meta name="description" content="Découvrez les opportunités de stages du programme GEER à l’ENSA Al Hoceima, avec des conseils, ressources et accès aux rapports via eService.">
-  <meta name="keywords" content="GEER, ENSA Al Hoceima, stages, énergies renouvelables, rapports, eService">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1LPHPYRMS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stages | Génie Énergétique et Énergies Renouvelables</title>
+    <meta
+      name="description"
+      content="Découvrez les opportunités de stages du programme GEER à l’ENSA Al Hoceima, avec des conseils, ressources et accès aux rapports via eService."
+    />
+    <meta
+      name="keywords"
+      content="GEER, ENSA Al Hoceima, stages, énergies renouvelables, rapports, eService"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-M1LPHPYRMS"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-M1LPHPYRMS');
-</script>
-<body class="bg-white font-poppins">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-lg fixed w-full z-50" style="height: 60px; top: 0;">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="ENSA logo" class="h-10" loading="lazy">
-        </a>
-        <span class="ml-3 text-xl font-semibold text-gray-800">GEER ENSAH</span>
+    gtag("config", "G-M1LPHPYRMS");
+  </script>
+  <body class="bg-white font-poppins">
+    <!-- Navbar -->
+    <nav
+      class="bg-white shadow-lg fixed w-full z-50"
+      style="height: 60px; top: 0"
+    >
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="assets/images/logo.png"
+              alt="ENSA logo"
+              class="h-10"
+              loading="lazy"
+            />
+          </a>
+          <span class="ml-3 text-xl font-semibold text-gray-800"
+            >GEER ENSAH</span
+          >
+        </div>
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            aria-label="Ouvrir le menu"
+            class="text-gray-800 focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex space-x-6">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer1.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 1</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer2.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer3.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 3</a
+            >
+          </li>
+          <li>
+            <a
+              href="stages.html"
+              class="nav-link text-gray-800 hover:text-green-600 font-semibold active"
+              >Stages</a
+            >
+          </li>
+          <li>
+            <a
+              href="professeurs.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Professeurs</a
+            >
+          </li>
+          <li>
+            <a
+              href="study_w_m.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Study With Me</a
+            >
+          </li>
+          <li>
+            <a
+              href="software.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Logiciels</a
+            >
+          </li>
+        </ul>
       </div>
-      <div class="md:hidden">
-        <button id="menu-toggle" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40"
+      >
+        <div class="flex justify-end p-4">
+          <button
+            id="menu-close"
+            aria-label="Fermer le menu"
+            class="text-gray-800 focus:outline-none"
+          >
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+        </div>
+        <ul class="flex flex-col space-y-4 p-4">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer1.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 1</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer2.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="geer3.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >GEER 3</a
+            >
+          </li>
+          <li>
+            <a
+              href="stages.html"
+              class="nav-link text-gray-800 hover:text-green-600 font-semibold active"
+              >Stages</a
+            >
+          </li>
+          <li>
+            <a
+              href="professeurs.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Professeurs</a
+            >
+          </li>
+          <li>
+            <a
+              href="study_w_m.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Study With Me</a
+            >
+          </li>
+          <li>
+            <a
+              href="software.html"
+              class="nav-link text-gray-800 hover:text-green-600"
+              >Logiciels</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul id="nav-menu" class="hidden md:flex space-x-6">
-        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600 ">Accueil</a></li>
-        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
-        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
-        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
-        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Stages</a></li>
-        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
-        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
-        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
-      </ul>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-0 bg-opacity-95 z-40">
-      <div class="flex justify-end p-4">
-        <button id="menu-close" aria-label="Fermer le menu" class="text-gray-800 focus:outline-none">
-          <i class="fas fa-times text-2xl"></i>
-        </button>
-      </div>
-      <ul class="flex flex-col space-y-4 p-4">
-        <li><a href="index.html" class="nav-link text-gray-800 hover:text-green-600">Accueil</a></li>
-        <li><a href="geer1.html" class="nav-link text-gray-800 hover:text-green-600">GEER 1</a></li>
-        <li><a href="geer2.html" class="nav-link text-gray-800 hover:text-green-600">GEER 2</a></li>
-        <li><a href="geer3.html" class="nav-link text-gray-800 hover:text-green-600">GEER 3</a></li>
-        <li><a href="stages.html" class="nav-link text-gray-800 hover:text-green-600 font-semibold active">Stages</a></li>
-        <li><a href="professeurs.html" class="nav-link text-gray-800 hover:text-green-600">Professeurs</a></li>
-        <li><a href="study_w_m.html" class="nav-link text-gray-800 hover:text-green-600">Study With Me</a></li>
-        <li><a href="software.html" class="nav-link text-gray-800 hover:text-green-600">Logiciels</a></li>
-      
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-green-600 to-blue-800 text-white py-20 pt-24">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-text">Stages GEER ENSA Al Hoceima</h1>
-      <p class="text-lg md:text-xl mb-6 hero-text">Boostez votre carrière avec des expériences pratiques dans les énergies renouvelables et l’efficacité énergétique.</p>
-      <a href="#internship-overview" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-green-600 hover:text-white transition">En savoir plus</a>
-    </div>
-  </section>
-
-  <!-- Internship Page -->
-  <main class="container mx-auto px-4 py-12">
-    <!-- Internship Overview -->
-    <section id="internship-overview" class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Types de Stages</h2>
-      <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">Les stages du programme GEER offrent une immersion professionnelle pour développer vos compétences techniques et pratiques.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <i class="fas fa-rocket text-green-600 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Stage d’Initiation (1ère Année)</h3>
-          <p class="text-gray-600 mb-4">Découvrez le monde professionnel à travers des missions d’observation dans des entreprises locales du secteur énergétique.</p>
-          <p class="text-gray-500 text-sm"><strong>Durée :</strong> 1 mois</p>
-        </div>
-        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <i class="fas fa-tools text-green-600 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Stage Technique (2ème Année)</h3>
-          <p class="text-gray-600 mb-4">Participez à des projets concrets en énergies renouvelables ou efficacité énergétique dans des entreprises partenaires.</p>
-          <p class="text-gray-500 text-sm"><strong>Durée :</strong> 2 mois</p>
-        </div>
-        <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <i class="fas fa-graduation-cap text-green-600 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Stage de Fin d’Études (3ème Année)</h3>
-          <p class="text-gray-600 mb-4">Réalisez un projet d’envergure, souvent lié à votre PFE, pour une transition vers le marché du travail.</p>
-          <p class="text-gray-500 text-sm"><strong>Durée :</strong> 4-6 mois</p>
-        </div>
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-green-600 to-blue-800 text-white py-20 pt-24"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-text">
+          Stages GEER ENSA Al Hoceima
+        </h1>
+        <p class="text-lg md:text-xl mb-6 hero-text">
+          Boostez votre carrière avec des expériences pratiques dans les
+          énergies renouvelables et l’efficacité énergétique.
+        </p>
+        <a
+          href="#internship-overview"
+          class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-green-600 hover:text-white transition"
+          >En savoir plus</a
+        >
       </div>
     </section>
 
-    <!-- Internship Tips -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Comment Réussir Votre Stage</h2>
-      <div class="relative max-w-3xl mx-auto">
-        <div class="absolute left-4 top-0 bottom-0 w-1 bg-green-600"></div>
-        <div class="space-y-8">
-          <div class="relative pl-12">
-            <div class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"></div>
-            <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-              <i class="fas fa-users text-green-600 text-3xl mb-4"></i>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Étape 1 : Réseautage</h3>
-              <p class="text-gray-600">Utilisez LinkedIn pour connecter avec des professionnels et participez à des conférences ou salons de l’énergie.</p>
+    <!-- Internship Page -->
+    <main class="container mx-auto px-4 py-12">
+      <!-- Internship Overview -->
+      <section id="internship-overview" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Types de Stages
+        </h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">
+          Les stages du programme GEER offrent une immersion professionnelle
+          pour développer vos compétences techniques et pratiques.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <i class="fas fa-rocket text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Stage d’Initiation (1ère Année)
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Découvrez le monde professionnel à travers des missions
+              d’observation dans des entreprises locales du secteur énergétique.
+            </p>
+            <p class="text-gray-500 text-sm"><strong>Durée :</strong> 1 mois</p>
+          </div>
+          <div
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <i class="fas fa-tools text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Stage Technique (2ème Année)
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Participez à des projets concrets en énergies renouvelables ou
+              efficacité énergétique dans des entreprises partenaires.
+            </p>
+            <p class="text-gray-500 text-sm"><strong>Durée :</strong> 2 mois</p>
+          </div>
+          <div
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <i class="fas fa-graduation-cap text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Stage de Fin d’Études (3ème Année)
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Réalisez un projet d’envergure, souvent lié à votre PFE, pour une
+              transition vers le marché du travail.
+            </p>
+            <p class="text-gray-500 text-sm">
+              <strong>Durée :</strong> 4-6 mois
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Internship Tips -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Comment Réussir Votre Stage
+        </h2>
+        <div class="relative max-w-3xl mx-auto">
+          <div class="absolute left-4 top-0 bottom-0 w-1 bg-green-600"></div>
+          <div class="space-y-8">
+            <div class="relative pl-12">
+              <div
+                class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"
+              ></div>
+              <div
+                class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+              >
+                <i class="fas fa-users text-green-600 text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Étape 1 : Réseautage
+                </h3>
+                <p class="text-gray-600">
+                  Utilisez LinkedIn pour connecter avec des professionnels et
+                  participez à des conférences ou salons de l’énergie.
+                </p>
+              </div>
+            </div>
+            <div class="relative pl-12">
+              <div
+                class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"
+              ></div>
+              <div
+                class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+              >
+                <i class="fas fa-search text-green-600 text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Étape 2 : Recherche d’Offres
+                </h3>
+                <p class="text-gray-600">
+                  Ciblez des entreprises spécialisées en énergies renouvelables
+                  et consultez le bureau des stages pour des opportunités.
+                </p>
+              </div>
+            </div>
+            <div class="relative pl-12">
+              <div
+                class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"
+              ></div>
+              <div
+                class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+              >
+                <i class="fas fa-file-alt text-green-600 text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Étape 3 : Candidature
+                </h3>
+                <p class="text-gray-600">
+                  Personnalisez votre CV et lettre de motivation pour mettre en
+                  avant vos projets GEER et compétences techniques.
+                </p>
+              </div>
+            </div>
+            <div class="relative pl-12">
+              <div
+                class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"
+              ></div>
+              <div
+                class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+              >
+                <i class="fas fa-handshake text-green-600 text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Étape 4 : Entretien
+                </h3>
+                <p class="text-gray-600">
+                  Préparez-vous à des questions techniques et démontrez votre
+                  passion pour le secteur énergétique.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="relative pl-12">
-            <div class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"></div>
-            <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-              <i class="fas fa-search text-green-600 text-3xl mb-4"></i>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Étape 2 : Recherche d’Offres</h3>
-              <p class="text-gray-600">Ciblez des entreprises spécialisées en énergies renouvelables et consultez le bureau des stages pour des opportunités.</p>
+        </div>
+      </section>
+
+      <!-- Downloads Section -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Ressources pour les Étudiants
+        </h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">
+          Téléchargez les modèles de rapport et consultez les rapports des
+          anciens étudiants sur eService.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <a
+            href="https://www.canva.com/fr_fr/modeles/s/rapport-de-stage/"
+            target="_blank"
+            rel="noopener"
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger"
+          >
+            <i class="fas fa-file-word text-blue-600 text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">
+              Modèle de Rapport (Word)
+            </h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Template pour rédiger votre rapport de stage.
+            </p>
+          </a>
+          <a
+            href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php"
+            target="_blank"
+            rel="noopener"
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger"
+          >
+            <i class="fas fa-file-pdf text-red-600 text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">
+              Modèle de Rapport (PDF)
+            </h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Version PDF pour consultation .
+            </p>
+          </a>
+          <a
+            href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php"
+            target="_blank"
+            rel="noopener"
+            class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger"
+          >
+            <i class="fas fa-file-alt text-green-600 text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">
+              Exemple de Rapport
+            </h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Modèle annoté pour guider votre rédaction.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- eService CTA -->
+      <section class="mb-12 bg-green-600 text-white p-8 rounded-lg text-center">
+        <h2 class="text-2xl font-bold mb-4">
+          Accédez aux Rapports des Anciens sur eService
+        </h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto">
+          Consultez les rapports de stage des anciens étudiants pour vous
+          inspirer et mieux comprendre les attentes du programme GEER.
+        </p>
+        <a
+          href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php"
+          target="_blank"
+          rel="noopener"
+          class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition"
+          >Accéder à eService</a
+        >
+      </section>
+
+      <!-- Soutenance Tips -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Réussir Votre Soutenance
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div
+            class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <div class="flex items-center mb-4">
+              <span class="text-green-600 font-bold text-xl mr-2">1.</span>
+              <i class="fas fa-chalkboard-teacher text-green-600 text-2xl"></i>
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Présentation Claire
+            </h3>
+            <p class="text-gray-600">
+              Utilisez des diapositives visuelles avec des graphiques et un
+              texte concis. Structurez en introduction, méthodologie, résultats,
+              et conclusion.
+            </p>
           </div>
-          <div class="relative pl-12">
-            <div class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"></div>
-            <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-              <i class="fas fa-file-alt text-green-600 text-3xl mb-4"></i>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Étape 3 : Candidature</h3>
-              <p class="text-gray-600">Personnalisez votre CV et lettre de motivation pour mettre en avant vos projets GEER et compétences techniques.</p>
+          <div
+            class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <div class="flex items-center mb-4">
+              <span class="text-green-600 font-bold text-xl mr-2">2.</span>
+              <i class="fas fa-clock text-green-600 text-2xl"></i>
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Gestion du Temps
+            </h3>
+            <p class="text-gray-600">
+              Répétez votre présentation pour respecter la durée (15-20 min) et
+              laissez du temps pour les questions.
+            </p>
           </div>
-          <div class="relative pl-12">
-            <div class="absolute left-2 top-2 w-4 h-4 bg-green-600 rounded-full"></div>
-            <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-              <i class="fas fa-handshake text-green-600 text-3xl mb-4"></i>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Étape 4 : Entretien</h3>
-              <p class="text-gray-600">Préparez-vous à des questions techniques et démontrez votre passion pour le secteur énergétique.</p>
+          <div
+            class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger"
+          >
+            <div class="flex items-center mb-4">
+              <span class="text-green-600 font-bold text-xl mr-2">3.</span>
+              <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Anticiper les Questions
+            </h3>
+            <p class="text-gray-600">
+              Préparez des réponses aux questions techniques et sur les limites
+              de votre projet pour une défense convaincante.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Downloads Section -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Ressources pour les Étudiants</h2>
-      <p class="text-gray-600 max-w-3xl mx-auto mb-8 text-center">Téléchargez les modèles de rapport et consultez les rapports des anciens étudiants sur eService.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-        <a href="https://www.canva.com/fr_fr/modeles/s/rapport-de-stage/" target="_blank" rel="noopener" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
-          <i class="fas fa-file-word text-blue-600 text-3xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800">Modèle de Rapport (Word)</h3>
-          <p class="text-gray-600 text-sm mt-2">Template pour rédiger votre rapport de stage.</p>
-        </a>
-        <a href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php" target="_blank" rel="noopener" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
-          <i class="fas fa-file-pdf text-red-600 text-3xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800">Modèle de Rapport (PDF)</h3>
-          <p class="text-gray-600 text-sm mt-2">Version PDF pour consultation .</p>
-        </a>
-        <a href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php" target="_blank" rel="noopener" class="card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-stagger transition animate-stagger">
-          <i class="fas fa-file-alt text-green-600 text-3xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800">Exemple de Rapport</h3>
-          <p class="text-gray-600 text-sm mt-2">Modèle annoté pour guider votre rédaction.</p>
-        </a>
-      </div>
-      
-    </section>
+    <!-- Footer -->
+    <footer>
+      <p class="text-center mt-4 text-white">© Club G2ER || Hakuna</p>
+    </footer>
 
-    <!-- eService CTA -->
-    <section class="mb-12 bg-green-600 text-white p-8 rounded-lg text-center">
-      <h2 class="text-2xl font-bold mb-4">Accédez aux Rapports des Anciens sur eService</h2>
-      <p class="text-lg mb-6 max-w-2xl mx-auto">Consultez les rapports de stage des anciens étudiants pour vous inspirer et mieux comprendre les attentes du programme GEER.</p>
-      <a href="https://ensah.ma/apps/eservices/public/login.php?error=-4&location=https%3A%2F%2Fensah.ma%2Fapps%2Feservices%2Finternal%2Fmembers%2Fcommon%2Fnotifications.php" target="_blank" rel="noopener" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">Accéder à eService</a>
-    </section>
-
-    <!-- Soutenance Tips -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Réussir Votre Soutenance</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-        <div class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <div class="flex items-center mb-4">
-            <span class="text-green-600 font-bold text-xl mr-2">1.</span>
-            <i class="fas fa-chalkboard-teacher text-green-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Présentation Claire</h3>
-          <p class="text-gray-600">Utilisez des diapositives visuelles avec des graphiques et un texte concis. Structurez en introduction, méthodologie, résultats, et conclusion.</p>
-        </div>
-        <div class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <div class="flex items-center mb-4">
-            <span class="text-green-600 font-bold text-xl mr-2">2.</span>
-            <i class="fas fa-clock text-green-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Gestion du Temps</h3>
-          <p class="text-gray-600">Répétez votre présentation pour respecter la durée (15-20 min) et laissez du temps pour les questions.</p>
-        </div>
-        <div class="card bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition animate-stagger">
-          <div class="flex items-center mb-4">
-            <span class="text-green-600 font-bold text-xl mr-2">3.</span>
-            <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Anticiper les Questions</h3>
-          <p class="text-gray-600">Préparez des réponses aux questions techniques et sur les limites de votre projet pour une défense convaincante.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer >
-    <p class="text-center mt-4 text-white">© Club G2ER || Hakuna</p>
-  </footer>
-
-  <script src="js/scripts.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
